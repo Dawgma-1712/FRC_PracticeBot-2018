@@ -604,6 +604,44 @@ AddOutputFilter chunkFilter
 				<Property Name="TgtF_targetfileGUID" Type="Str">{B0F0D109-BC56-4F69-B33E-7E219BE9C215}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">startup.rtexe</Property>
 			</Item>
+			<Item Name="My Source Distribution" Type="Source Distribution">
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{1EF36BE2-7966-40C2-8626-5773BCBF0ABB}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">My Source Distribution</Property>
+				<Property Name="Bld_excludedDirectory[0]" Type="Path">vi.lib</Property>
+				<Property Name="Bld_excludedDirectory[0].pathType" Type="Str">relativeToAppDir</Property>
+				<Property Name="Bld_excludedDirectory[1]" Type="Path">instr.lib</Property>
+				<Property Name="Bld_excludedDirectory[1].pathType" Type="Str">relativeToAppDir</Property>
+				<Property Name="Bld_excludedDirectory[2]" Type="Path">user.lib</Property>
+				<Property Name="Bld_excludedDirectory[2].pathType" Type="Str">relativeToAppDir</Property>
+				<Property Name="Bld_excludedDirectory[3]" Type="Path">resource/objmgr</Property>
+				<Property Name="Bld_excludedDirectory[3].pathType" Type="Str">relativeToAppDir</Property>
+				<Property Name="Bld_excludedDirectory[4]" Type="Path">/C/ProgramData/National Instruments/InstCache/17.0</Property>
+				<Property Name="Bld_excludedDirectory[5]" Type="Path">/C/Users/Bendethic/Documents/LabVIEW Data/2017(32-bit)/ExtraVILib</Property>
+				<Property Name="Bld_excludedDirectoryCount" Type="Int">6</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/NI_AB_TARGETNAME/My Source Distribution</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{7BD39CB8-CA34-47DB-8471-CBF38FDB1B15}</Property>
+				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
+				<Property Name="Bld_version.build" Type="Int">1</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
+				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin</Property>
+				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">/home/lvuser/natinst/bin/data</Property>
+				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Source[0].itemID" Type="Str">{4B802CC5-3F74-4E83-AE93-E9A1B1055079}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[1].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/Target/Auto/AutoCommands</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[1].type" Type="Str">Container</Property>
+				<Property Name="SourceCount" Type="Int">2</Property>
+			</Item>
 		</Item>
 	</Item>
 </Project>
