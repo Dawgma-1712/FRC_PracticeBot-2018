@@ -750,9 +750,6 @@ AddOutputFilter chunkFilter
 			<Item Name="AutonomousRoutine.ctl" Type="VI" URL="../../Shared/AutonomousRoutine.ctl"/>
 			<Item Name="RobotNeededPathData.ctl" Type="VI" URL="../../Shared/RobotNeededPathData.ctl"/>
 			<Item Name="Constants.vi" Type="VI" URL="../Configuration/Constants.vi"/>
-			<Item Name="LinearInterpolate.vi" Type="VI" URL="../../../new-FRC-2018/Robot-Project/Support Code/LinearInterpolate.vi"/>
-			<Item Name="RateLimiter.vi" Type="VI" URL="../../../new-FRC-2018/Robot-Project/Support Code/RateLimiter.vi"/>
-			<Item Name="CheesyDrive.vi" Type="VI" URL="../../../new-FRC-2018/Robot-Project/Drive/CheesyDrive.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
