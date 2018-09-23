@@ -10,9 +10,6 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="Utils" Type="Folder" URL="../Utils">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
 		<Item Name="GenerateXML.vi" Type="VI" URL="../GenerateXML.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -32,11 +29,17 @@
 				<Item Name="Search and Replace Pattern.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Search and Replace Pattern.vi"/>
 				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi"/>
 			</Item>
+			<Item Name="AddNewNode.vi" Type="VI" URL="../Utils/AddNewNode.vi"/>
+			<Item Name="CreateNiceXMLString.vi" Type="VI" URL="../Utils/CreateNiceXMLString.vi"/>
 			<Item Name="DOMUserDefRef.dll" Type="Document" URL="DOMUserDefRef.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="FilePath.vi" Type="VI" URL="../Utils/FilePath.vi"/>
+			<Item Name="FindNodeAtIndex.vi" Type="VI" URL="../Utils/FindNodeAtIndex.vi"/>
 			<Item Name="lvinput.dll" Type="Document" URL="/&lt;resource&gt;/lvinput.dll"/>
+			<Item Name="ModifyNode.vi" Type="VI" URL="../Utils/ModifyNode.vi"/>
 			<Item Name="PromptForAttributes.vi" Type="VI" URL="../PromptForAttributes.vi"/>
+			<Item Name="ReplaceSelfClosingStructureElements.vi" Type="VI" URL="../Utils/ReplaceSelfClosingStructureElements.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
