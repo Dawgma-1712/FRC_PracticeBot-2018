@@ -13,8 +13,14 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="CommandTemplates" Type="Folder" URL="../CreateCommands/CommandTemplates">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="CommandTemplates" Type="Folder">
+			<Item Name="DriveForDistance.vi" Type="VI" URL="../CreateCommands/CommandTemplates/DriveForDistance.vi"/>
+			<Item Name="DriveForTime.vi" Type="VI" URL="../CreateCommands/CommandTemplates/DriveForTime.vi"/>
+			<Item Name="IntakeForTime.vi" Type="VI" URL="../CreateCommands/CommandTemplates/IntakeForTime.vi"/>
+			<Item Name="MoveArm.vi" Type="VI" URL="../CreateCommands/CommandTemplates/MoveArm.vi"/>
+			<Item Name="MoveArmForTime.vi" Type="VI" URL="../CreateCommands/CommandTemplates/MoveArmForTime.vi"/>
+			<Item Name="TurnToAngle.vi" Type="VI" URL="../CreateCommands/CommandTemplates/TurnToAngle.vi"/>
+			<Item Name="Wait.vi" Type="VI" URL="../CreateCommands/CommandTemplates/Wait.vi"/>
 		</Item>
 		<Item Name="Sim Support Files" Type="Folder">
 			<Item Name="FRC SimulatedRSC" Type="Folder">
@@ -203,23 +209,154 @@ AddOutputFilter chunkFilter
 		<Item Name="data" Type="Folder" URL="../data">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="Drive" Type="Folder" URL="../Drive">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="Drive" Type="Folder">
+			<Item Name="Commands" Type="Folder">
+				<Item Name="Arc Turn.vi" Type="VI" URL="../Drive/Commands/Arc Turn.vi"/>
+				<Item Name="Drive for Distance.vi" Type="VI" URL="../Drive/Commands/Drive for Distance.vi"/>
+				<Item Name="Drive for Time.vi" Type="VI" URL="../Drive/Commands/Drive for Time.vi"/>
+				<Item Name="Drive Immediate.vi" Type="VI" URL="../Drive/Commands/Drive Immediate.vi"/>
+				<Item Name="Drive Path.vi" Type="VI" URL="../Drive/Commands/Drive Path.vi"/>
+				<Item Name="DriveToCube.vi" Type="VI" URL="../Drive/Commands/DriveToCube.vi"/>
+				<Item Name="Read Drive Operation.vi" Type="VI" URL="../Drive/Commands/Read Drive Operation.vi"/>
+				<Item Name="Reserve Drive.vi" Type="VI" URL="../Drive/Commands/Reserve Drive.vi"/>
+				<Item Name="Stop Driving.vi" Type="VI" URL="../Drive/Commands/Stop Driving.vi"/>
+				<Item Name="Template for Drive Immediate with Deadband.vit" Type="VI" URL="../Drive/Commands/Template for Drive Immediate with Deadband.vit"/>
+				<Item Name="Template for Drive Immediate.vit" Type="VI" URL="../Drive/Commands/Template for Drive Immediate.vit"/>
+				<Item Name="Template for Drive with Duration.vit" Type="VI" URL="../Drive/Commands/Template for Drive with Duration.vit"/>
+				<Item Name="Turn For Angle.vi" Type="VI" URL="../Drive/Commands/Turn For Angle.vi"/>
+				<Item Name="Turn to Angle.vi" Type="VI" URL="../Drive/Commands/Turn to Angle.vi"/>
+			</Item>
+			<Item Name="Implementation" Type="Folder">
+				<Item Name="Infrastructure" Type="Folder">
+					<Item Name="Drive Check for New Command.vi" Type="VI" URL="../Drive/Implementation/Infrastructure/Drive Check for New Command.vi"/>
+					<Item Name="Drive Command Helper.vi" Type="VI" URL="../Drive/Implementation/Infrastructure/Drive Command Helper.vi"/>
+					<Item Name="Drive Controller Initialization.vi" Type="VI" URL="../Drive/Implementation/Infrastructure/Drive Controller Initialization.vi"/>
+					<Item Name="Drive Controller Interactive Check.vi" Type="VI" URL="../Drive/Implementation/Infrastructure/Drive Controller Interactive Check.vi"/>
+				</Item>
+				<Item Name="Drive Controller.vi" Type="VI" URL="../Drive/Implementation/Drive Controller.vi"/>
+				<Item Name="Drive Operations.ctl" Type="VI" URL="../Drive/Implementation/Drive Operations.ctl"/>
+				<Item Name="Drive Published Globals.vi" Type="VI" URL="../Drive/Implementation/Drive Published Globals.vi"/>
+				<Item Name="Drive Setpoints.ctl" Type="VI" URL="../Drive/Implementation/Drive Setpoints.ctl"/>
+			</Item>
+			<Item Name="PurePursuit" Type="Folder">
+				<Item Name="AdjustLeftRightSpeeds.vi" Type="VI" URL="../Drive/PurePursuit/AdjustLeftRightSpeeds.vi"/>
+				<Item Name="CalcDistanceFromEnd.vi" Type="VI" URL="../Drive/PurePursuit/CalcDistanceFromEnd.vi"/>
+				<Item Name="CalculateCurvature.vi" Type="VI" URL="../Drive/PurePursuit/CalculateCurvature.vi"/>
+				<Item Name="CalculatePowerPursuit.vi" Type="VI" URL="../Drive/PurePursuit/CalculatePowerPursuit.vi"/>
+				<Item Name="CalculateVelAtPoints.vi" Type="VI" URL="../Drive/PurePursuit/CalculateVelAtPoints.vi"/>
+				<Item Name="ClosestPoint.vi" Type="VI" URL="../Drive/PurePursuit/ClosestPoint.vi"/>
+				<Item Name="DrawCircle.vi" Type="VI" URL="../Drive/PurePursuit/DrawCircle.vi"/>
+				<Item Name="EncodersGyroToXY.vi" Type="VI" URL="../Drive/PurePursuit/EncodersGyroToXY.vi"/>
+				<Item Name="EndOfPathHandler.vi" Type="VI" URL="../Drive/PurePursuit/EndOfPathHandler.vi"/>
+				<Item Name="InjectPoints.vi" Type="VI" URL="../Drive/PurePursuit/InjectPoints.vi"/>
+				<Item Name="LookAheadPoint.vi" Type="VI" URL="../Drive/PurePursuit/LookAheadPoint.vi"/>
+				<Item Name="MaxVelGivenRadius.vi" Type="VI" URL="../Drive/PurePursuit/MaxVelGivenRadius.vi"/>
+				<Item Name="PurePursuit.vi" Type="VI" URL="../Drive/PurePursuit/PurePursuit.vi"/>
+				<Item Name="PurePursuitTester.vi" Type="VI" URL="../Drive/PurePursuit/PurePursuitTester.vi"/>
+				<Item Name="RadiusOfCircleThreePoints.vi" Type="VI" URL="../Drive/PurePursuit/RadiusOfCircleThreePoints.vi"/>
+				<Item Name="Smoother.vi" Type="VI" URL="../Drive/PurePursuit/Smoother.vi"/>
+				<Item Name="TestPurePursuit.vi" Type="VI" URL="../Drive/PurePursuit/TestPurePursuit.vi"/>
+				<Item Name="VisualizePurePursuit.vi" Type="VI" URL="../Drive/PurePursuit/VisualizePurePursuit.vi"/>
+			</Item>
+			<Item Name="CheesyDrive.vi" Type="VI" URL="../Drive/CheesyDrive.vi"/>
+			<Item Name="DriveTeleop.vi" Type="VI" URL="../Drive/DriveTeleop.vi"/>
+			<Item Name="Score Macro.vi" Type="VI" URL="../Drive/Score Macro.vi"/>
 		</Item>
-		<Item Name="Framework" Type="Folder" URL="../Framework">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="Framework" Type="Folder">
+			<Item Name="Begin.vi" Type="VI" URL="../Framework/Begin.vi"/>
+			<Item Name="Disabled.vi" Type="VI" URL="../Framework/Disabled.vi"/>
+			<Item Name="Finish.vi" Type="VI" URL="../Framework/Finish.vi"/>
+			<Item Name="Periodic Tasks.vi" Type="VI" URL="../Framework/Periodic Tasks.vi"/>
+			<Item Name="Robot Global Data.vi" Type="VI" URL="../Framework/Robot Global Data.vi"/>
 		</Item>
-		<Item Name="Support Code" Type="Folder" URL="../Support Code">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="Support Code" Type="Folder">
+			<Item Name="RobotSimulator" Type="Folder">
+				<Item Name="motorTorque.vi" Type="VI" URL="../Support Code/RobotSimulator/motorTorque.vi"/>
+				<Item Name="Robot.vi" Type="VI" URL="../Support Code/RobotSimulator/Robot.vi"/>
+				<Item Name="robotFriction.vi" Type="VI" URL="../Support Code/RobotSimulator/robotFriction.vi"/>
+				<Item Name="robotSimulation.vi" Type="VI" URL="../Support Code/RobotSimulator/robotSimulation.vi"/>
+			</Item>
+			<Item Name="2CubeRoutineSelector.vi" Type="VI" URL="../Support Code/2CubeRoutineSelector.vi"/>
+			<Item Name="ArcadeJoystick.vi" Type="VI" URL="../Support Code/ArcadeJoystick.vi"/>
+			<Item Name="AutoRoutineSelector.vi" Type="VI" URL="../Support Code/AutoRoutineSelector.vi"/>
+			<Item Name="BoxcarFilter.vi" Type="VI" URL="../Support Code/BoxcarFilter.vi"/>
+			<Item Name="Buttons Pressed.vi" Type="VI" URL="../Support Code/Buttons Pressed.vi"/>
+			<Item Name="CalculateFilePath.vi" Type="VI" URL="../Support Code/CalculateFilePath.vi"/>
+			<Item Name="CreateFile.vi" Type="VI" URL="../Support Code/CreateFile.vi"/>
+			<Item Name="CustomError.vi" Type="VI" URL="../Support Code/CustomError.vi"/>
+			<Item Name="Debugging globals.vi" Type="VI" URL="../Support Code/Debugging globals.vi"/>
+			<Item Name="derivative.vi" Type="VI" URL="../Support Code/derivative.vi"/>
+			<Item Name="DistanceFormula.vi" Type="VI" URL="../Support Code/DistanceFormula.vi"/>
+			<Item Name="Elapsed Times.vi" Type="VI" URL="../Support Code/Elapsed Times.vi"/>
+			<Item Name="FancyPID.vi" Type="VI" URL="../Support Code/FancyPID.vi"/>
+			<Item Name="GetPDPCurrents.vi" Type="VI" URL="../Support Code/GetPDPCurrents.vi"/>
+			<Item Name="HandleDeadband.vi" Type="VI" URL="../Support Code/HandleDeadband.vi"/>
+			<Item Name="Latch.vi" Type="VI" URL="../Support Code/Latch.vi"/>
+			<Item Name="LinearInterpolate.vi" Type="VI" URL="../Support Code/LinearInterpolate.vi"/>
+			<Item Name="LoggingHeaders.vi" Type="VI" URL="../Support Code/LoggingHeaders.vi"/>
+			<Item Name="OneShotPulse.vi" Type="VI" URL="../Support Code/OneShotPulse.vi"/>
+			<Item Name="PIDTuner.vi" Type="VI" URL="../Support Code/PIDTuner.vi"/>
+			<Item Name="PixyGetCube.vi" Type="VI" URL="../Support Code/PixyGetCube.vi"/>
+			<Item Name="RateLimiter.vi" Type="VI" URL="../Support Code/RateLimiter.vi"/>
+			<Item Name="Timeout.vi" Type="VI" URL="../Support Code/Timeout.vi"/>
+			<Item Name="TimerOffDelay.vi" Type="VI" URL="../Support Code/TimerOffDelay.vi"/>
+			<Item Name="TimerOnDelay.vi" Type="VI" URL="../Support Code/TimerOnDelay.vi"/>
+			<Item Name="ToggleOnPress.vi" Type="VI" URL="../Support Code/ToggleOnPress.vi"/>
 		</Item>
-		<Item Name="Vision" Type="Folder" URL="../Vision">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="Vision" Type="Folder">
+			<Item Name="Vision Processing.vi" Type="VI" URL="../Vision/Vision Processing.vi"/>
 		</Item>
-		<Item Name="Auto" Type="Folder" URL="../Auto">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="Auto" Type="Folder">
+			<Item Name="Commands" Type="Folder">
+				<Item Name="DriveForDistance-C.vi" Type="VI" URL="../Auto/Commands/DriveForDistance-C.vi"/>
+				<Item Name="DriveForTime-C.vi" Type="VI" URL="../Auto/Commands/DriveForTime-C.vi"/>
+				<Item Name="IntakeForTime-C.vi" Type="VI" URL="../Auto/Commands/IntakeForTime-C.vi"/>
+				<Item Name="MoveArm-C.vi" Type="VI" URL="../Auto/Commands/MoveArm-C.vi"/>
+				<Item Name="MoveArmForTime-C.vi" Type="VI" URL="../Auto/Commands/MoveArmForTime-C.vi"/>
+				<Item Name="TurnToAngle-C.vi" Type="VI" URL="../Auto/Commands/TurnToAngle-C.vi"/>
+				<Item Name="Wait-C.vi" Type="VI" URL="../Auto/Commands/Wait-C.vi"/>
+			</Item>
+			<Item Name="Util" Type="Folder">
+				<Item Name="FindCloseTagByNameC.vi" Type="VI" URL="../Auto/Util/FindCloseTagByNameC.vi"/>
+				<Item Name="FindElementC.vi" Type="VI" URL="../Auto/Util/FindElementC.vi"/>
+				<Item Name="FindElementStartByNameC.vi" Type="VI" URL="../Auto/Util/FindElementStartByNameC.vi"/>
+				<Item Name="FindEmptyElementC.vi" Type="VI" URL="../Auto/Util/FindEmptyElementC.vi"/>
+				<Item Name="FindFirstTagC.vi" Type="VI" URL="../Auto/Util/FindFirstTagC.vi"/>
+				<Item Name="FindMatchingCloseTagC.vi" Type="VI" URL="../Auto/Util/FindMatchingCloseTagC.vi"/>
+				<Item Name="ParseXMLFragmentsC.vi" Type="VI" URL="../Auto/Util/ParseXMLFragmentsC.vi"/>
+			</Item>
+			<Item Name="EncapsulatedAutonomous.vi" Type="VI" URL="../Auto/EncapsulatedAutonomous.vi"/>
+			<Item Name="ExecuteCommand.vi" Type="VI" URL="../Auto/ExecuteCommand.vi"/>
+			<Item Name="ExecuteXML.vi" Type="VI" URL="../Auto/ExecuteXML.vi"/>
+			<Item Name="ParseXML.vi" Type="VI" URL="../Auto/ParseXML.vi"/>
 		</Item>
-		<Item Name="Intake" Type="Folder" URL="../Intake">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="Intake" Type="Folder">
+			<Item Name="Commands" Type="Folder">
+				<Item Name="Immediate but left and right.vi" Type="VI" URL="../Intake/Commands/Immediate but left and right.vi"/>
+				<Item Name="Intake for Duration.vi" Type="VI" URL="../Intake/Commands/Intake for Duration.vi"/>
+				<Item Name="Intake Immediate.vi" Type="VI" URL="../Intake/Commands/Intake Immediate.vi"/>
+				<Item Name="Intake Until Cube.vi" Type="VI" URL="../Intake/Commands/Intake Until Cube.vi"/>
+				<Item Name="Read Intake Operation.vi" Type="VI" URL="../Intake/Commands/Read Intake Operation.vi"/>
+				<Item Name="Reserve Intake.vi" Type="VI" URL="../Intake/Commands/Reserve Intake.vi"/>
+				<Item Name="Template for Intake Immediate with Deadband.vit" Type="VI" URL="../Intake/Commands/Template for Intake Immediate with Deadband.vit"/>
+				<Item Name="Template for Intake Immediate.vit" Type="VI" URL="../Intake/Commands/Template for Intake Immediate.vit"/>
+				<Item Name="Template for Intake with Duration.vit" Type="VI" URL="../Intake/Commands/Template for Intake with Duration.vit"/>
+			</Item>
+			<Item Name="Implementation" Type="Folder">
+				<Item Name="Infrastructure" Type="Folder">
+					<Item Name="Intake Check for New Command.vi" Type="VI" URL="../Intake/Implementation/Infrastructure/Intake Check for New Command.vi"/>
+					<Item Name="Intake Command Helper.vi" Type="VI" URL="../Intake/Implementation/Infrastructure/Intake Command Helper.vi"/>
+					<Item Name="Intake Controller Initialization.vi" Type="VI" URL="../Intake/Implementation/Infrastructure/Intake Controller Initialization.vi"/>
+					<Item Name="Intake Controller Interactive Check.vi" Type="VI" URL="../Intake/Implementation/Infrastructure/Intake Controller Interactive Check.vi"/>
+				</Item>
+				<Item Name="Intake Controller.vi" Type="VI" URL="../Intake/Implementation/Intake Controller.vi"/>
+				<Item Name="Intake Operations.ctl" Type="VI" URL="../Intake/Implementation/Intake Operations.ctl"/>
+				<Item Name="Intake Published Globals.vi" Type="VI" URL="../Intake/Implementation/Intake Published Globals.vi"/>
+				<Item Name="Intake Setpoints.ctl" Type="VI" URL="../Intake/Implementation/Intake Setpoints.ctl"/>
+				<Item Name="IntakeStateMachine.vi" Type="VI" URL="../Intake/Implementation/IntakeStateMachine.vi"/>
+				<Item Name="IntakeStates.ctl" Type="VI" URL="../Intake/Implementation/IntakeStates.ctl"/>
+			</Item>
+			<Item Name="IntakeTeleop.vi" Type="VI" URL="../Intake/IntakeTeleop.vi"/>
 		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
 		<Item Name="Teleop.vi" Type="VI" URL="../Teleop.vi"/>
