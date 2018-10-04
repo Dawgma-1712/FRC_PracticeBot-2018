@@ -863,6 +863,7 @@ AddOutputFilter chunkFilter
 			<Item Name="ArrangeValuesByName.vi" Type="VI" URL="../CreateCommands/Utils/ArrangeValuesByName.vi"/>
 			<Item Name="StringToNumber.vi" Type="VI" URL="../CreateCommands/Utils/StringToNumber.vi"/>
 			<Item Name="AutonomousRoutine.ctl" Type="VI" URL="../../Shared/AutonomousRoutine.ctl"/>
+			<Item Name="StringToBoolean.vi" Type="VI" URL="../CreateCommands/Utils/StringToBoolean.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
