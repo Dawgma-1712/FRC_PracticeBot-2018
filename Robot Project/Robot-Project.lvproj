@@ -232,9 +232,6 @@ AddOutputFilter chunkFilter
 		<Item Name="Intake" Type="Folder" URL="../Intake">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="Arm" Type="Folder" URL="../Arm">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
 		<Item Name="Elevator" Type="Folder" URL="../Elevator">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
